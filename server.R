@@ -13,7 +13,7 @@ library(quantmod)
 shinyServer(function(input, output) {
     montecarlo<-function(paths, count, weight)
     {
-        address<-"d:/Git/Dashboard/"
+        address<-""
         df<- read.csv(paste(address, "BankNifty.csv", sep=""), 1)
         df2<-data.frame("Date"=df['Date'], "Price"=df['Close'])
         for(i in 2:nrow(df))
